@@ -1,6 +1,7 @@
 #import "@preview/touying:0.5.3": *
 
 #import "colour.typ": colour
+#import "outline.typ": custom-outline
 
 #let multicolumns(columns: auto, alignment: top, gutter: 1em, ..bodies) = {
   let bodies = bodies.pos()
@@ -197,7 +198,21 @@
     set align(horizon)
     show: pad.with(left: 15%, right: 15%)
 
-    components.adaptive-columns(outline())
+    custom-outline(
+      title: none,
+      fill: none,
+      filter: hd => hd.relation != none and not hd.relation.unrelated,
+      depth: 2,
+      transform: (hd, it) => {
+        set text(size: 1.25em, fill: self.colors.primary, weight: "bold") if hd.relation != none and hd.relation.same
+        set text(fill: self.colors.primary) if hd.relation != none and hd.relation.child
+        set text(fill: text.fill.transparentize(60%)) if hd.relation != none and hd.relation.sibling
+
+        // Extract just the heading text without numbering
+        let heading-text = hd.heading.body
+        heading-text
+      }
+    )
     
     body
   }
