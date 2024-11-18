@@ -1,0 +1,16 @@
+[package]
+name = "lineal"
+version = "0.0.0"
+entrypoint = "lib.typ"
+authors = ["ellsphillips <elliott.phillips.dev@gmail.com>"]
+license = "MIT"
+description = "Typst slides template built with Touying"
+repository = "https://github.com/ellsphiillips/lineal"
+keywords = ["typst", "touying", "slide", "theme", "template"]
+categories = ["presentation"]
+exclude = [".github/", "README.md"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
