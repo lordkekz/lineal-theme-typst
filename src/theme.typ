@@ -110,7 +110,7 @@
 #let new-section-slide(level: 1, numbered: true, body) = touying-slide-wrapper(self => {
   let slide-body = {
     set align(horizon)
-    show: pad.with(left: 15%, right: 15%)
+    show: pad.with(left: 5%, right: 10%)
 
     custom-outline(
       title: none,
