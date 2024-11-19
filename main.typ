@@ -5,19 +5,23 @@
 #import "src/title.typ": title-slide
 #import "src/colour.typ": colour
 
-#let lineal-wordmark = text(size: 40pt)[$bb("L")"ineal"$]
-#let lineal-logo = square(size: 1em, fill: gradient.linear(colour.primary, colour.primary-light, angle: -30deg), radius: .1em)
+
+#let brand = (
+  wordmark: [$bb("L")"ineal"$],
+  logo: square(size: 1em, fill: gradient.linear(colour.primary, colour.primary-light, angle: -30deg), radius: .1em),
+)
+
 
 #show: lineal-theme.with(
   aspect-ratio: "16-9",
   // config-common(handout: true),
   config-info(
-    title: lineal-wordmark,
+    title: brand.wordmark,
     subtitle: [A Typst slide template],
     author: [Author],
     date: datetime.today(),
     institution: [Institution],
-    logo: lineal-logo,
+    logo: brand.logo,
   ),
 )
 
