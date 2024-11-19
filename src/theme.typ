@@ -160,7 +160,7 @@
   logo: self => self.info.logo,
   header-right: context utils.slide-counter.display() + " / " + utils.last-slide-number,
   footer-left: self => pad(self.info.logo, y: -.2em),
-  footer-right: "some info",
+  footer-right: self => self.info.title,
   footer-progress: true,
   ..args,
   body,

@@ -44,7 +44,7 @@
               stack(
                 dir: ltr,
                 spacing: 1fr,
-                info.title,
+                text(size: 40pt, info.title),
                 info.logo,
               )
               line(
