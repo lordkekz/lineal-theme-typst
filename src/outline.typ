@@ -1,6 +1,7 @@
 #import "@preview/touying:0.5.3": *
 
 #import "colour.typ": colour
+#import "progress.typ": progress-bar
 
 #let current-heading(level: auto, outlined: true) = {
   let here = here()
@@ -173,7 +174,7 @@
                   #v(-0.25em)
                   #box(width: 100%)[
                     #let section-ratio = (hd.path.at(0) - 1) / (headings.filter(h => h.level == 1).len() - 1)
-                    #components.progress-bar(height: 2pt, colour.primary, colour.primary-light)
+                    #progress-bar(variant: "broad")
                   ]
                   #v(0.5em)
                 ]

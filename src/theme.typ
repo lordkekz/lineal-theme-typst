@@ -2,6 +2,7 @@
 
 #import "colour.typ": colour
 #import "outline.typ": custom-outline
+#import "progress.typ": progress-bar
 
 #let multicolumns(columns: auto, alignment: top, gutter: 1em, ..bodies) = {
   let bodies = bodies.pos()
@@ -64,7 +65,7 @@
     show: components.cell.with(inset: (x: 2em, y: -1em))
     if self.store.footer-progress {
       box(width: 100%)[
-        #components.progress-bar(height: 2pt, colour.primary, colour.primary-light)
+        #progress-bar(variant: "exact")
       ]
     }
     show: components.cell.with(inset: (y: 2em))
