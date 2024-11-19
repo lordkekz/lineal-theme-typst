@@ -61,8 +61,8 @@
 
     let ratios = (
       broad: (
-      calc.min(1.0, utils.slide-counter.get().first() / utils.last-slide-counter.final().first()),
-      calc.min(1.0, 1 - utils.slide-counter.get().first() / utils.last-slide-counter.final().first())
+        calc.min(1.0, utils.slide-counter.get().first() / utils.last-slide-counter.final().first()),
+        calc.min(1.0, 1 - utils.slide-counter.get().first() / utils.last-slide-counter.final().first())
       ),
       near: (
         PREVIOUS / TOTAL,
@@ -77,11 +77,22 @@
 
 
 
-#let progress-bar(variant: str, height: 2pt, ratios: array) = calculate-progress-ratios(ratios => {
-  grid(
+#let progress-bar(variant: str, height: 2pt, ratios: array) = calculate-progress-ratios(variant, ratios => {
+  let mapping = (
+    broad: grid(
       columns: ratios.map(r => r * 100%),
       rows: height,
       components.cell(fill: colour.primary),
       components.cell(fill: colour.primary-light),
+    ),
+    near: grid(
+      columns: ratios.map(r => r * 100%),
+      rows: height,
+      components.cell(fill: colour.primary),
+      components.cell(fill: colour.primary-light),
+      components.cell(fill: black.transparentize(60%)),
+    )
   )
+
+  mapping.at(variant, default: mapping.broad)
 })
