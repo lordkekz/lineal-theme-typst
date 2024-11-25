@@ -1,14 +1,15 @@
 [package]
 name = "lineal"
-version = "0.0.0"
+version = "0.1.0"
 entrypoint = "lib.typ"
-authors = ["ellsphillips <elliott.phillips.dev@gmail.com>"]
+authors = ["ellsphillips <@ellsphillips>"]
 license = "MIT"
-description = "Typst slides template built with Touying"
+description = "Build elegent slide decks with Typst"
 repository = "https://github.com/ellsphiillips/lineal"
-keywords = ["typst", "touying", "slide", "theme", "template"]
+keywords = ["typst", "touying", "slide", "theme", "template", "lecture", "presentation"]
 categories = ["presentation"]
 exclude = [".github/", "README.md"]
+
 
 [template]
 path = "template"

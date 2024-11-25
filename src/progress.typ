@@ -121,7 +121,7 @@
 
 
 
-#let progress-bar(variant: str, height: 2pt, ratios: array) = calculate-progress-ratios(variant, ratios => {
+#let lineal-progress-bar(variant: str, height: 2pt, ratios: array) = calculate-progress-ratios(variant, ratios => {
   let mapping = (
     broad: grid(
       columns: ratios.map(r => r * 100%),

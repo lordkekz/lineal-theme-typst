@@ -18,10 +18,28 @@ Hence, Lineal was born. A professional set of slides produced near instantly, re
 
 ## Usage
 
-Lineal is currently only available here. Get started by cloning the repository and populating your own `/content/<slug>.typ` files:
+Lineal is available through Typst Universe. Ensure you have installed Typst locally or are familiar with the Typst [web app](https://typst.app/) or the [Tinymist LSP](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extensions for VS Code.
 
-```bash
-git clone https://www.github.com/ellsphillips/lineal
+Get started by importing the package and populating your own `/content/<slug>.typ` files:
+
+```typst
+#import "@preview/lineal:0.1.0": lineal-theme
+
+#show: lineal-theme.with(
+  aspect-ratio: "16-9",
+  config-info(
+    title: [$bb("L")"ineal"$],
+    subtitle: [A Typst slide template],
+    author: [Author],
+    date: datetime.today(),
+    institution: [Institution],
+    logo: [Logo],
+  ),
+)
+
+#title-slide()
+
+#include "content/index.typ"
 ```
 
 Marking up content is as you would with any other Typst document, where the section (`= <section-title>`) and subsection (`== <slide-title>`) shorthands generate the new section slides with dynamic outline and new tracked slides respectively.

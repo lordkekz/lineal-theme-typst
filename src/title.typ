@@ -2,20 +2,6 @@
 
 #import "colour.typ": colour
 
-#let title-slide() = (
-  // Create a background with horizontal lines
-  let line-count = 20, // Number of lines
-  let line-spacing = 10, // Spacing between lines
-  for i in range(line-count) {
-    [#place(
-      horizon + center,
-      dy: - i * line-spacing * 1%,
-      line(length: 4cm, stroke: 2pt + maroon)
-    )
-    ]
-  }
-)
-
 #let title-slide(
   extra: none,
   ..args,

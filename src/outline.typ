@@ -1,7 +1,7 @@
 #import "@preview/touying:0.5.3": *
 
 #import "colour.typ": colour
-#import "progress.typ": progress-bar
+#import "progress.typ": lineal-progress-bar
 
 #let current-heading(level: auto, outlined: true) = {
   let here = here()
@@ -53,7 +53,7 @@
 
 
 
-#let custom-outline(
+#let lineal-outline(
   filter: hd => true,
   transform: (_, it) => it,
   target: heading.where(outlined: true),
@@ -174,7 +174,7 @@
                   #v(-0.25em)
                   #box(width: 100%)[
                     #let section-ratio = (hd.path.at(0) - 1) / (headings.filter(h => h.level == 1).len() - 1)
-                    #progress-bar(variant: "broad")
+                    #lineal-progress-bar(variant: "broad")
                   ]
                   #v(0.5em)
                 ]
