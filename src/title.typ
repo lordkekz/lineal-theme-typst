@@ -16,13 +16,13 @@
     )
 
     block(
-      width: 60%,
+      width: 75%,
       inset: 2cm,
       breakable: false,
       align(
         horizon + left,
         {
-          v(40%)
+          v(10%)
           block(
             inset: 0em,
             breakable: false,
@@ -44,13 +44,18 @@
             },
           )
           set text(size: .8em)
-          v(1em)
+          v(.5em)
+          if info.author != none {
+            parbreak()
+            text(size: .9em, info.author)
+          }
+          v(.5em)
           if info.institution != none {
             parbreak()
             text(size: .9em, info.institution)
           }
           if info.date != none {
-            v(20%)
+            v(25%)
             text(size: .8em, utils.display-info-date(self))
           }
         },
