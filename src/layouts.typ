@@ -1,4 +1,16 @@
+#import "@preview/touying:0.5.3": components
+
 #import "../src/brand.typ": colour, brand
+
+#let page-center(content) = {
+  block(width: 100%)[
+    #set align(horizon + center)
+    #components.cell(width: auto)[
+      #set align(left)
+      #content
+    ]
+  ]
+}
 
 #let two-boxes(content1, content2) = {
   grid(
