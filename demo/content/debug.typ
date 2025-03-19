@@ -1,4 +1,4 @@
-#import "../src/page-statistics.typ": page-stats
+#import "../../src/page-statistics.typ": page-stats
 
 #let SLIDES_PER_SECTION = (
   (
