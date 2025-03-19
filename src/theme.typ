@@ -1,6 +1,6 @@
 #import "@preview/touying:0.5.3": *
 
-#import "colour.typ": colour
+#import "brand.typ": colour
 #import "outline.typ": lineal-outline
 #import "progress.typ": lineal-progress-bar
 
