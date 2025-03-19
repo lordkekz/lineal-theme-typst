@@ -96,7 +96,8 @@
       text(fill: self.colors.primary, weight: "bold", str(nums) + ".")
     })
     set list(marker: (level) => {
-      text(fill: self.colors.primary, weight: "bold", sym.triangle.r.filled)
+      place(dy: 2pt, square(fill: self.colors.primary, radius: 1.5pt, size: 8pt))
+      h(.5em)
     })
     set table(stroke: self.colors.primary)
     show: setting
@@ -114,7 +115,6 @@
 
     lineal-outline(
       title: none,
-      fill: none,
       filter: hd => hd.relation != none and not hd.relation.unrelated,
       depth: 2,
       transform: (hd, it) => {
@@ -178,7 +178,7 @@
     ),
     config-methods(
       init: (self: none, body) => {
-        set text(size: 20pt, font: "Lato")
+        set text(size: 20pt)
         show highlight: body => text(fill: self.colors.primary, strong(body.body))
         body
       },

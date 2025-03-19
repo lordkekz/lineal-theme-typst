@@ -1,15 +1,9 @@
 #import "@preview/touying:0.5.3": *
 #import "@preview/numbly:0.1.0": *
 
-#import "src/theme.typ": lineal-theme
-#import "src/title.typ": title-slide
-#import "src/colour.typ": colour
+#import "../lib.typ": lineal-theme, title-slide, colour, brand
 
 
-#let brand = (
-  wordmark: [$bb("L")"ineal"$],
-  logo: square(size: 1em, fill: gradient.linear(colour.primary, colour.primary-light, angle: -30deg), radius: .1em),
-)
 
 
 #show: lineal-theme.with(
@@ -29,4 +23,4 @@
 
 #title-slide()
 
-#include "content/index.typ"
+#include "../content/index.typ"
