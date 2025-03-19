@@ -1,7 +1,7 @@
 #import "@preview/touying:0.5.3": components
 #import "@preview/tablex:0.0.9": *
 
-#import "../src/brand.typ": brand, colour
+#import "../../src/brand.typ": brand, colour
 
 = Showcase
 

@@ -1,7 +1,7 @@
-#import "../src/layouts.typ"
-#import "../src/components/repository.typ": repository
-#import "../src/components/code-block.typ": code-block
-#import "../src/components/quote.typ": quote
+#import "../../src/layouts.typ"
+#import "../../src/components/repository.typ": repository
+#import "../../src/components/code-block.typ": code-block
+#import "../../src/components/quote.typ": quote
 
 = Components
 

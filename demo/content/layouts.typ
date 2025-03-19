@@ -1,5 +1,5 @@
-#import "../lib.typ": brand
-#import "../src/layouts.typ"
+#import "../../lib.typ": brand
+#import "../../src/layouts.typ"
 
 = Layouts
 

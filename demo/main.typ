@@ -23,4 +23,4 @@
 
 #title-slide()
 
-#include "../content/index.typ"
+#include "content/index.typ"
