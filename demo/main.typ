@@ -3,9 +3,6 @@
 
 #import "../lib.typ": lineal-theme, title-slide, colour, brand
 
-
-
-
 #show: lineal-theme.with(
   aspect-ratio: "16-9",
   // config-common(handout: true),

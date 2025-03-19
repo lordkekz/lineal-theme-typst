@@ -20,6 +20,8 @@ Hence, Lineal was born. A professional set of slides produced near instantly, re
 
 Lineal is available through Typst Universe. Ensure you have installed Typst locally or are familiar with the Typst [web app](https://typst.app/) or the [Tinymist LSP](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extensions for VS Code.
 
+### Package API
+
 Get started by importing the package and populating your own `/content/<slug>.typ` files:
 
 ```typst
@@ -28,12 +30,12 @@ Get started by importing the package and populating your own `/content/<slug>.ty
 #show: lineal-theme.with(
   aspect-ratio: "16-9",
   config-info(
-    title: [$bb("L")"ineal"$],
+    title: brand.wordmark,
     subtitle: [A Typst slide template],
     author: [Author],
     date: datetime.today(),
     institution: [Institution],
-    logo: [Logo],
+    logo: brand.logo,
   ),
 )
 
@@ -43,6 +45,36 @@ Get started by importing the package and populating your own `/content/<slug>.ty
 ```
 
 Marking up content is as you would with any other Typst document, where the section (`= <section-title>`) and subsection (`== <slide-title>`) shorthands generate the new section slides with dynamic outline and new tracked slides respectively.
+
+### Components
+
+Lineal includes a suite of components that can be used to help lay out and embelish your content.
+
+The `layouts` library is designed to provide a range of layout primitives that solve common layout requirements.
+
+The `components` library offers bespoke UI elements to help add flair to your content, such as a hyperlinked repository language bar, or a quote with a configurable author, or even an IDE-style code block with syntax highlighting.
+
+You can use these in tandem to quickly build a presentation that is both beautiful and functional:
+
+```typst
+== Code block
+
+#let pre = "
+def hello(name: str) -> None:
+    print(f'Hello, {name}!')
+
+if __name__ == '__main__':
+    hello('Typst')
+"
+
+#layouts.page-center(
+  code-block(
+    filename: "src/app/hello_typst.py",
+    language: "python",
+    pre,
+  )
+)
+```
 
 ## Contributing
 
