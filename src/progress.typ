@@ -1,6 +1,6 @@
 #import "@preview/touying:0.5.3": utils, components
 
-#import "colour.typ": colour
+#import "brand.typ": colour
 
 
 
@@ -40,10 +40,9 @@
     
     // Determine if this is the last section
     let heading-selector = selector(heading.where(level: 1)).before(here())
-    let level = counter(heading-selector)
+    let current-section-number = query(heading-selector).len()
     let headings = query(heading-selector)
     if headings.len() == 0 { return 0 }
-    let current-section-number = level.get().first()
 
     let is-last-section = total-sections == current-section-number
 

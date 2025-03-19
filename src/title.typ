@@ -1,6 +1,6 @@
 #import "@preview/touying:0.5.3": *
 
-#import "colour.typ": colour
+#import "brand.typ": colour
 
 #let title-slide(
   extra: none,
@@ -12,7 +12,7 @@
 
     place(
       horizon + center,
-      image("../assets/img/title-bg.svg")
+      image("static/title-bg.svg")
     )
 
     block(

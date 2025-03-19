@@ -1,6 +1,6 @@
 #import "@preview/touying:0.5.3": *
 
-#import "colour.typ": colour
+#import "brand.typ": colour
 #import "progress.typ": lineal-progress-bar
 
 #let current-heading(level: auto, outlined: true) = {
@@ -131,7 +131,7 @@
                   #h(1em)
                   #link(
                     it.element.location(),
-                    transform(hd, it.body),
+                    transform(hd, it.body()),
                   )
                 ]
               } else {
@@ -141,7 +141,7 @@
                   #h(1em)
                   #link(
                     it.element.location(),
-                    transform(hd, it.body),
+                    transform(hd, it.body()),
                   )
                 ]
               }
@@ -158,7 +158,7 @@
               selector(<P>).and(<NP>)
             }
             
-            outline(target: section_selector, fill: none, indent: 0em, ..args)
+            outline(target: section_selector, indent: 0em, ..args)
           },
           {
             // Right column: current section and its subsections
@@ -169,11 +169,12 @@
                 box(width: 100%)[
                   #link(
                     it.element.location(),
-                    transform(hd, it.body),
+                    transform(hd, it.body()),
                   )
                   #v(-0.25em)
                   #box(width: 100%)[
-                    #let section-ratio = (hd.path.at(0) - 1) / (headings.filter(h => h.level == 1).len() - 1)
+                    #let pages-in-section = headings.filter(h => h.level == 1).len() - 1
+                    #let section-ratio = (hd.path.at(0) - 1) / (if pages-in-section > 0 { pages-in-section } else { 1 })
                     #lineal-progress-bar(variant: "broad")
                   ]
                   #v(0.5em)
@@ -184,7 +185,7 @@
                   #set list(marker: text(fill: colour.neutral-dark.transparentize(60%))[---])
                   - #link(
                     it.element.location(),
-                    transform(hd, it.body),
+                    transform(hd, it.body()),
                   )
                 ]
               }
@@ -211,7 +212,7 @@
               selector(<P>).and(<NP>)
             }
             
-            outline(target: section_selector, fill: none, ..args)
+            outline(target: section_selector, ..args)
           }
         )
       ]
