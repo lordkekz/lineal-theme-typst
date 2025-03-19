@@ -12,7 +12,7 @@
 
     place(
       horizon + center,
-      image("../assets/img/title-bg.svg")
+      image("static/title-bg.svg")
     )
 
     block(

@@ -14,7 +14,7 @@
       #set align(left)
       #stack(
         dir: ltr,
-        image("../icons/github.svg", alt: "GitHub", fit: "contain", format: "svg", height: 1em, width: 1em),
+        image("../static/icons/github.svg", alt: "GitHub", fit: "contain", format: "svg", height: 1em, width: 1em),
         h(.2em) + "/" + h(.2em),
         text(size: .8em, font: "Monaco", weight: "bold", name),
       )
