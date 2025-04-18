@@ -62,13 +62,13 @@
   let footer(self) = {
     set align(bottom)
     set text(size: 0.8em)
-    show: components.cell.with(inset: (x: 2em, y: -1em))
+    show: components.cell.with(inset: (x: 2em, top: 0em, bottom: 1em))
     if self.store.footer-progress {
       box(width: 100%)[
         #lineal-progress-bar(variant: "exact")
       ]
     }
-    show: components.cell.with(inset: (y: 2em))
+    v(100%)
     components.left-and-right(
       text(fill: self.colors.neutral-darkest.lighten(40%), utils.call-or-display(self, self.store.footer-left)),
       text(fill: self.colors.neutral-darkest, utils.call-or-display(self, self.store.footer-right)),
@@ -170,7 +170,7 @@
       paper: "presentation-" + aspect-ratio,
       header-ascent: 30%,
       footer-descent: 30%,
-      margin: (top: 3em, bottom: 1.5em, x: 2em),
+      margin: (top: 3em, bottom: 3em, x: 2em),
     ),
     config-common(
       slide-fn: slide,
