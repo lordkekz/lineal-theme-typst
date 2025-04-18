@@ -12,10 +12,10 @@
 )
 
 #let base-colours = (
-  primary: rgb("#003C57"),
-  secondary: rgb("#006931"),
+  primary: rgb("#368429"),
+  secondary: rgb("#003169"),
   neutral-light: rgb("#fafafa"),
-  neutral-dark: rgb("#23373b"),
+  neutral-dark: rgb("#233b37"),
 )
 
 #let colour = (
