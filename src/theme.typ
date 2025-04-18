@@ -169,8 +169,8 @@
     config-page(
       paper: "presentation-" + aspect-ratio,
       header-ascent: 30%,
-      footer-descent: 30%,
-      margin: (top: 3em, bottom: 3em, x: 2em),
+      footer-descent: 20%,
+      margin: (top: 3em, bottom: 2.5em, x: 2em),
     ),
     config-common(
       slide-fn: slide,
