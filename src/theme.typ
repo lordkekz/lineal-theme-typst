@@ -96,7 +96,7 @@
       text(fill: self.colors.primary, weight: "bold", str(nums) + ".")
     })
     set list(marker: (level) => {
-      place(dy: 2pt, square(fill: self.colors.primary, radius: 1.5pt, size: 8pt))
+      place(dy: 2pt, square(fill: self.colors.primary, radius: 1.5pt, size: .5em))
       h(.5em)
     })
     set table(stroke: self.colors.primary)
