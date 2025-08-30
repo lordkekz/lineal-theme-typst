@@ -93,8 +93,8 @@
       + slides-covered-in-current-section
       + slides-remaining-in-current-section
       + future-section-slides
+      + 1
     )
-    
 
     let ratios = (
       broad: (
@@ -108,7 +108,7 @@
       ),
       exact: (
         historic-section-slides / exact-total,
-        slides-covered-in-current-section / exact-total,
+        (slides-covered-in-current-section +1 ) / exact-total,
         slides-remaining-in-current-section / exact-total,
         future-section-slides / exact-total,
       )
