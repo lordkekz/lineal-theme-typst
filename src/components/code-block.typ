@@ -5,11 +5,12 @@
 #let code-block-icon(
   language: "python"
 ) = {
-  block(
-    width: .6em,
-    height: .6em,
-    image("../static/icons/github.svg")
-  )
+  // TODO re-enable when SVGs are reliably reproducible
+  // block(
+  //   width: .6em,
+  //   height: .6em,
+  //   image("../static/icons/github.svg")
+  // )
 }
 
 #let code-block-title(

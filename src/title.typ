@@ -10,10 +10,11 @@
   let body = {
     set text(fill: self.colors.neutral-darkest)
 
-    place(
-      horizon + center,
-      image("static/title-bg.svg")
-    )
+    // TODO re-enable when SVGs are reliably reproducible
+    // place(
+    //   horizon + center,
+    //   image("static/title-bg.svg")
+    // )
 
     block(
       width: 75%,

@@ -7,4 +7,5 @@
 #import "theme.typ": lineal-theme, slide, new-section-slide, focus-slide
 
 #import "components/code-block.typ": code-block
-#import "components/repository.typ": repository
+// TODO re-enable when SVGs are reliably reproducible
+// #import "components/repository.typ": repository

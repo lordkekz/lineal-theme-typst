@@ -85,13 +85,14 @@
   let new-setting = body => {
     show: align.with(self.store.align)
     set text(fill: self.colors.neutral-darkest)
-    show heading.where(level: self.slide-level + 1): it => {
-      stack(
-        dir: ltr, spacing: .4em,
-        image("uob-bullet.svg", height: .8em),
-        text(fill: self.colors.primary, it.body)
-      )
-    }
+    // TODO re-enable when SVGs are reliably reproducible
+    // show heading.where(level: self.slide-level + 1): it => {
+    //   stack(
+    //     dir: ltr, spacing: .4em,
+    //     image("uob-bullet.svg", height: .8em),
+    //     text(fill: self.colors.primary, it.body)
+    //   )
+    // }
     set enum(numbering: (nums) => {
       text(fill: self.colors.primary, weight: "bold", str(nums) + ".")
     })
