@@ -23,7 +23,10 @@
       align(
         horizon + left,
         {
-          v(10%)
+          v(.5em)
+          if info.date != none {
+            v(1em + .7em)
+          }
           block(
             inset: 0em,
             breakable: false,
@@ -44,20 +47,19 @@
               }
             },
           )
-          set text(size: .8em)
           v(.5em)
           if info.author != none {
             parbreak()
-            text(size: .9em, info.author)
+            text(size: .7em, info.author)
           }
           v(.5em)
           if info.institution != none {
             parbreak()
-            text(size: .9em, info.institution)
+            text(size: .7em, info.institution)
           }
           if info.date != none {
-            v(25%)
-            text(size: .8em, utils.display-info-date(self))
+            v(1em)
+            text(size: .7em, utils.display-info-date(self))
           }
         },
       )
