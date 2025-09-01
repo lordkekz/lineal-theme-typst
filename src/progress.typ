@@ -84,7 +84,6 @@
       (
         query(selector(heading.where(level: 2)).after(here()).after(selector(heading.where(level: 1)).after(here()))).len()
         + query(selector(heading.where(level: 1)).after(here())).len()
-        + 1
       )
     }
 
