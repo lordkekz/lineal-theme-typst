@@ -1,4 +1,4 @@
-#import "@preview/touying:0.5.3": utils, components
+#import "@preview/touying:0.6.1": utils, components
 
 #import "brand.typ": colour
 

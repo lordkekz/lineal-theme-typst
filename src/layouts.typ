@@ -1,4 +1,4 @@
-#import "@preview/touying:0.5.3": components
+#import "@preview/touying:0.6.1": components
 
 #import "../src/brand.typ": colour, brand
 
