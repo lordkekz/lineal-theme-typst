@@ -137,7 +137,8 @@
     exact: grid(
       columns: ratios.map(r => r * 100%),
       rows: height,
-      components.cell(fill: black.transparentize(60%)),
+      // components.cell(fill: black.transparentize(60%)),
+      components.cell(fill: colour.primary),
       components.cell(fill: colour.primary),
       components.cell(fill: colour.primary-light),
       components.cell(fill: black.transparentize(80%)),
